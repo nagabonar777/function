@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-segitiga</title>
+</head>
+<body>
+    <script>
+        var luas;
+        var keliling;
+        var alas;
+        var tinggi;
+        var sisi;
+
+        function hitung(){
+            alas =parseInt(document.getElementById("ipt_alas").value);
+            sisi =parseInt(document.getElementById("ipt_sisi").value);
+            tinggi =parseInt(document.getElementById("ipt_tinggi").value);
+            luas = (1/2) * alas *tinggi;
+            keliling = sisi + sisi + sisi
+            document.getElementById("opt_luas").value = luas;
+            document.getElementById("opt_keliling").value = keliling;
+        }
+    </script>
+       <div>
+        <table>
+            <head>
+                <tr>
+                    <h1>Menghitung Luas Dan Keliling</h1>
+            </head>
+            <tbody>
+                <tr>
+                    <td>Masukan alas </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="ipt_alas"></td>
+                </tr>
+                <tr>
+                    <td>Masukan sisi </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="ipt_sisi"></td>
+                </tr>
+                <tr>
+                    <td>Masukan tinggi </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="ipt_tinggi"></td>
+                </tr>
+                <tr>
+                    <td><button onclick="hitung()">Hitung</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Luas </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="opt_luas" disabled></td>
+                </tr>
+                <tr>
+                    <td>Keliling </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="opt_keliling" disabled></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
